@@ -1,0 +1,14 @@
+/* CSS Styling code for various sections to be adjusted */
+
+/* Text Shadow Syling */
+.text-shadow {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7)
+}
+
+/* Custom Button Styling */
+.btn:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 4px 4px 4px 4px gray;
+    font-style: italic;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMAP Home</title>
+    <!-- "<link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>" is an alternate way to incorporate Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-primary">
+    
+    <!-- Header Section -->
+    <header>
+        <!-- Implementing 'Jumbotron' for the header and welcome message -->
+        <div class="jumbotron bg-secondary text-center text-white text-shadow">
+            <h1 class="display-1">Task Manager!</h1>
+            <p class="lead">Managing your tasks as easy as 1, 2, 3.</p>
+            <hr class="my-4">
+            <p class="lead">Let's get started below.</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Nav</a>
+            <button class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./details.html">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./create-task.html">Create Task</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./authenticate.html">User Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./resgister.html">Register New User</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Display Task Details with Form to make changes -->
+    <section class="container m-4 bg-primary text-white p-3 rounded border border-primary-subtle">
+        <h2 class="display-2 text-center">Task Details:</h2>
+
+        <!-- Section with 3 columns: Task Name, Task Details, Task Status -->
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-sm-1 g-4 text-center">
+
+                <!-- Column 1: Task Name -->
+                <div class="col">
+                    <h4 class="display-4 text-center">Sample Task</h4>
+                </div>
+
+                <!-- Column 2: Task Details -->
+                <div class="col">
+                    <div class="container-fluid bg-white text-black ">
+                        <p>
+                            This is a description of the original task titled "Sample Task", hope you got it completed.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column 3: Task Status -->
+                <div class="col">
+                    <h5 class="display-6 text-center">Task Completion Status:</h5>
+                </div>
+                <div class="col-2">
+                    <div class="container-fluid input-group-text bg-primary text-white">
+                        <label for="incomplete-task">Incomplete</label>
+                        <input class="form-check-input m-1" type="checkbox" value="" checked aria-label="Checkbox for Incomplete Task">
+                    </div>
+                    <div class="container-fluid input-group-text bg-primary text-white">
+                        <label for="complete-task">Complete</label>
+                        <input class="form-check-input m-1" type="checkbox" value="" aria-label="Checkbox for Complete Task">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section with form to complete or update task -->
+    <section>
+        <div class="container-fluid bg-primary">
+            <div class="card bg-primary">
+                <form action="/submit" method="post" class="bg-success text-white p-3 mx-auto rounded">
+                    <legend class="display-3">Update Task</legend>
+                    <fieldset>
+
+                        <!-- Task Name Input -->
+                        <div class="form-group mb-3">
+                            <label for="task-name">Task Name</label>
+                            <input type="text" class="form-control" name="task-name" id="task-name" placeholder="Enter task name" required>
+                        </div>
+
+                        <!-- Task Notes Input -->
+                        <div class="form-group mb-3">
+                            <label for="task-notes">Task Notes</label>
+                            <textarea name="task-notes" id="task-notes" rows="6" placeholder="task notes here" required></textarea>
+                        </div>
+
+                        <!-- Status Checkbox -->
+                        <div class="input-group mb-3">  
+                            <legend class="display-5">Task Status:</legend>
+                            <div class="input-group-text bg-success text-white">
+                                <label for="incomplete-task">Incomplete</label>
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for Incomplete Task">
+                            </div>
+                            <div class="input-group-text bg-success text-white">
+                                <label for="complete-task">Complete</label>
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for Complete Task">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-dark btn-lg">Update Task</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!--  Footer Navigation Bar -->
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+           <div class="container-fluid">
+               <a class="navbar-brand" href="#">Nav</a>
+               <button class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                   <span class="navbar-toggle-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                   <ul class="navbar-nav">
+                       <li class="nav-item">
+                           <a class="nav-link" href="./home.html">Home</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="./dashboard.html">Dashboard</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="./details.html">Details</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="./create-task.html">Create Task</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="./authenticate.html">User Log In</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="./resgister.html">Register New User</a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </nav>
+   </footer>
+</body>
+</html>

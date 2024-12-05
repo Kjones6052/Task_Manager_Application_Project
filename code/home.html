@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMAP Home</title>
+    <!-- "<link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>" is an alternate way to incorporate Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-primary">
+    
+    <!-- Header Section -->
+    <header>
+        <!-- Implementing 'Jumbotron' for the header and welcome message -->
+        <div class="jumbotron bg-secondary text-center text-white text-shadow">
+            <h1 class="display-1">Task Manager!</h1>
+            <p class="lead">Managing your tasks as easy as 1, 2, 3.</p>
+            <hr class="my-4">
+            <p class="lead">Let's get started below.</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Nav</a>
+            <button class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./details.html">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./create-task.html">Create Task</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./authenticate.html">User Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./resgister.html">Register New User</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Card Section: 1 Card per Feature -->
+    <section class="container-fluid bg-primary text-white">
+        <h2 class="display-2 text-center">Task Manager Features:</h2>
+        <div class="d-flex justify-content-center">
+            <div class="container m-3">
+                <div class="row row-cols-1 row-cols-sm-4 g-4 text-center">
+                    <div class="col-sm-6 col-md-4 mb-4">
+                        <div class="card h-85 bg-success text-white m-4 p-3 rounded">
+                            <i class="bi bi-wrench-adjustable card-icon"></i>
+                            
+                            <!-- Dashboard Card -->
+                            <img src="../static/dashboard.jpg" alt="dashboard" aria-label="dashboard" class="card-img-top img-thumbnail">
+                            <div class="card-body">
+                                <h3 class="card-title">Dashboard</h3>
+                                <p class="card-text">
+                                    The Dashboard is your go to for creating and completing tasks
+                                </p>
+                                <a href="./dashboard.html" class="btn btn-primary">Go To Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-4">
+                        <div class="card h-85 bg-success text-white m-4 p-3 rounded">
+                            <i class="bi bi-wrench-adjustable card-icon"></i>
+                            
+                            <!-- Details Card -->
+                            <img src="../static/details.png" alt="details" aria-label="details" class="card-img-top img-thumbnail">
+                            <div class="card-body">
+                                <h3 class="card-title">Task Details</h3>
+                                <p class="card-text">
+                                    Task Details is where you can view the details of any task
+                                </p>
+                                <a href="./details.html" class="btn btn-primary">Go To Task Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-4">
+                        <div class="card h-85 bg-success text-white m-4 p-3 rounded">
+                            <i class="bi bi-wrench-adjustable card-icon"></i>
+                            
+                            <!-- Create Task Card -->
+                            <img src="../static/create-task.png" alt="create-task" aria-label="create-task" class="card-img-top img-thumbnail">
+                            <div class="card-body">
+                                <h3 class="card-title">Create Task</h3>
+                                <p class="card-text">
+                                    This is where you can create a new task
+                                </p>
+                                <a href="./create-task.html" class="btn btn-primary">Go To Create Task</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-4">
+                        <div class="card h-85 bg-success text-white m-4 p-3 rounded">
+                            <i class="bi bi-wrench-adjustable card-icon"></i>
+                            
+                            <!-- Authenticate Card -->
+                            <img src="../static/authentication.png" alt="authentication" aria-label="authentication" class="card-img-top img-thumbnail">
+                            <div class="card-body">
+                                <h3 class="card-title">Authenticate</h3>
+                                <p class="card-text">
+                                    This is where you can log into your account after verifying login credentials
+                                </p>
+                                <a href="./authenticate.html" class="btn btn-primary">Go To Authenticate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-4">
+                        <div class="card h-85 bg-success text-white m-4 p-3 rounded">
+                            <i class="bi bi-wrench-adjustable card-icon"></i>
+                            
+                            <!-- Register Card -->
+                            <img src="../static/registration.webp" alt="registration" aria-label="registration" class="card-img-top img-thumbnail">
+                            <div class="card-body">
+                                <h3 class="card-title">Register</h3>
+                                <p class="card-text">
+                                    This is where you can create a new user account
+                                </p>
+                                <a href="./resgister.html" class="btn btn-primary">Go To Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+         <!-- Footer Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Nav</a>
+                <button class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggle-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./details.html">Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./create-task.html">Create Task</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./authenticate.html">User Log In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./resgister.html">Register New User</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </footer>
+</body>
+</html>
